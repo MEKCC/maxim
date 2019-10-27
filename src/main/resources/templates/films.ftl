@@ -5,12 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+    <div>
+        <form action="/logout" method="post">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </div>
+
+
 <h1>Hello from films</h1>
 
 <div>
     <form method="post">
         <input type="text" name="name" placeholder="Enter name">
         <input type="text" name="year" placeholder="Enter year">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         <input type="submit" value="OK">
     </form>
 </div>
