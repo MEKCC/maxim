@@ -13,6 +13,7 @@
     <input title="Name" type="text" name="name" value="${film.name}">
     <p>Year</p>
     <input title="Year" type="text" name="year" value="${film.year}">
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     <input type="submit" value="OK">
 </form>
 

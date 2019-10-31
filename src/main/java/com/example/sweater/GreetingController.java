@@ -27,10 +27,10 @@ public class GreetingController {
         return "films";
     }
 
-    @PostMapping("/films")
-    public String add(@ModelAttribute Film film) {
-        filmRepo.save(film);
-        return "redirect:/films";
+    @PostMapping("/findFilms")
+    public String findFilm(@RequestParam String name, Model model) {
+        model.addAttribute("films", filmRepo.findByName(name));
+        return "search";
     }
 
     @GetMapping("/films/{id}")
