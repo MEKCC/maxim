@@ -1,5 +1,7 @@
-package com.example.sweater;
+package com.example.sweater.controller;
 
+import com.example.sweater.domain.Film;
+import com.example.sweater.repos.FilmRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +18,7 @@ public class GreetingController {
     private FilmRepo filmRepo;
 
     @GetMapping("/")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Map<String, Object> model) {
+    public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Map<String, Object> model) {
         model.put("name", name);
         return "greeting";
     }

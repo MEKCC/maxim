@@ -1,4 +1,4 @@
-package com.example.sweater;
+package com.example.sweater.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

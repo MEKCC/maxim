@@ -1,5 +1,6 @@
-package com.example.sweater;
+package com.example.sweater.repos;
 
+import com.example.sweater.domain.Film;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

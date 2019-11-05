@@ -1,4 +1,4 @@
-package com.example.sweater;
+package com.example.sweater.domain;
 
 public enum Role {
     USER, ADMIN;
