@@ -8,6 +8,8 @@
     </div>
     <br>
     <a href="/user">Users list</a>
+    <br>
+    <a href="/filmsEdit">Films list</a>
 
     <h1>Hello from films</h1>
 
@@ -31,11 +33,7 @@
                 <td><a href="/films/${film.id}">${film.id}</a></td>
                 <td>${film.name}</td>
                 <td>${film.year}</td>
-                <td><a href="/delete/${film.id}">Delete</a></td>
-                <td><a href="/update/${film.id}">Update</a></td>
             </tr>
         </#list>
     </table>
-    <br>
-    <a href="/addFilm"><h3>Add new film</h3></a>
 </@c.page>

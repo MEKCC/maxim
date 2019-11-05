@@ -39,35 +39,5 @@ public class GreetingController {
         model.addAttribute("film", film);
         return "showFilm";
     }
-
-    @GetMapping("/addFilm")
-    public String createFilmPage() {
-        return "createFilm";
-    }
-
-    @PostMapping("/addFilm")
-    public String addFilm(@ModelAttribute("film") Film film) {
-        filmRepo.save(film);
-        return "redirect:/films";
-    }
-
-    @GetMapping("/delete/{id}")
-    public String deleteFilm(@PathVariable("id") long id) {
-        filmRepo.deleteById(id);
-        return "redirect:/films";
-    }
-
-    @GetMapping("/update/{id}")
-    public String update(@PathVariable("id") long id, Model model) {
-        Film film = filmRepo.findById(id).get();
-        model.addAttribute("film", film);
-        return "editFilm";
-    }
-
-    @PostMapping("/updateFilm")
-    public String updateFilm(@ModelAttribute("film") Film film) {
-        filmRepo.save(film);
-        return "redirect:/films/" + film.getId();
-    }
 }
 

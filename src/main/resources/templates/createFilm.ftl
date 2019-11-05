@@ -1,6 +1,6 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
-    <form name="film" action="/addFilm" method="post">
+    <form name="film" action="/filmsEdit/addFilm" method="post">
         <p>Name</p>
         <input title="Name" type="text" name="name">
         <p>Year</p>
