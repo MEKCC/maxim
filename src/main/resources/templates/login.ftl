@@ -3,5 +3,8 @@
 <@c.page>
     Login page
     <@l.login "/login" />
+    <#if message??>
+        <p>${message}</p>
+    </#if>
     <a href="/registration">Add new User</a>
 </@c.page>
