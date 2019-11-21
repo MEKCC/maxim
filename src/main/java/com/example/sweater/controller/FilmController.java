@@ -62,6 +62,6 @@ public class FilmController {
     @Transactional
     public String updateFilm(@ModelAttribute("film") Film film) {
         filmRepo.save(film);
-        return "redirect:/filmsEdit/" + film.getId();
+        return "redirect:/filmsEdit/";
     }
 }
