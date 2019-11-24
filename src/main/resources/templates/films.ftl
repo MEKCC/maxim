@@ -1,11 +1,6 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
 
-    <a href="/user">Users list</a>
-    <br>
-    <a href="/filmsEdit">Films list</a>
-
-
     <h1 class="text-center">Film list</h1>
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
