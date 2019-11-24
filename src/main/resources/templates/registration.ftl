@@ -1,9 +1,13 @@
 <#import "parts/common.ftl" as c>
 <#import "parts/login.ftl" as l>
 <@c.page>
-    Add new User
-    <@l.login "/registration" />
+
+    <@l.login "/registration" "confirm" true/>
+
+    <br>
     <#if message??>
-        <p>${message}</p>
+        <div class="alert alert-danger" role="alert">
+            <p class="text-center"><strong>${message}</strong></p>
+        </div>
     </#if>
 </@c.page>

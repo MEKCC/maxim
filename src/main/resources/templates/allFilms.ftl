@@ -1,24 +1,34 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
 
-    <h1 align="center"> Films list </h1>
-    <table border="1">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Year</th>
-        </tr>
-        <#list films as film>
-            <tr>
-                <td><a href="/films/${film.id}">${film.id}</a></td>
-                <td>${film.name}</td>
-                <td>${film.year}</td>
-                <td><a href="/filmsEdit/delete/${film.id}">Delete</a></td>
-                <td><a href="/filmsEdit/update/${film.id}">Update</a></td>
-            </tr>
-        </#list>
-    </table>
 
+    <h1 class="text-center">Film list</h1>
     <br>
-    <a href="/filmsEdit/addFilm"><h3>Add new film</h3></a>
+    <a class="btn btn-success" href="/filmsEdit/addFilm">Create Film</a>
+    <br>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            </thead>
+            <tbody>
+            <#list films as film>
+                <tr>
+                    <td>${film.id}.</td>
+                    <td>${film.name}</td>
+                    <td>${film.year}</td>
+                    <td><a href="/filmsEdit/delete/${film.id}">Delete</a></td>
+                    <td><a href="/filmsEdit/update/${film.id}">Update</a></td>
+                </tr>
+            </#list>
+            </tbody>
+        </table>
+    </div>
+
 </@c.page>

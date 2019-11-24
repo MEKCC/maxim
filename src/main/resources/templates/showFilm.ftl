@@ -1,20 +1,23 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
     <h1>Film info</h1>
-    <table border="1">
-        <tr>
-            <td>Id</td>
-            <td>${film.id}</td>
-        </tr>
-        <tr>
-            <td>Name</td>
-            <td>${film.name}</td>
-        </tr>
-        <tr>
-            <td>Year</td>
-            <td>${film.year}</td>
-        </tr>
-    </table>
-    <br>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Year</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>${film.id}.</td>
+                <td>${film.name}</td>
+                <td>${film.year}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
     <a href="/films/">Back</a>
 </@c.page>
