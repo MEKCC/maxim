@@ -2,7 +2,7 @@
 <#import "parts/login.ftl" as l>
 <@c.page>
 
-    <@l.login "/login" "sign in" />
+    <@l.login "/login" "sign in" false/>
 
     <br>
     <#if message??>

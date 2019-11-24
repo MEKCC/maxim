@@ -1,4 +1,4 @@
-<#macro login path button>
+<#macro login path button isRegisterForm>
 
     <section id="cover">
         <div id="cover-caption">
@@ -14,7 +14,7 @@
                                            required>
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only">Email</label>
+                                    <label class="sr-only">Password</label>
                                     <input type="password" class="form-control" name="password" placeholder="password"
                                            required>
                                 </div>
@@ -23,7 +23,7 @@
                             </form>
                         </div>
                         <br>
-                        <a class="btn btn-success" href="/registration">registration</a>
+                        <#if !isRegisterForm> <a class="btn btn-success" href="/registration">registration</a> </#if>
                     </div>
                 </div>
             </div>
