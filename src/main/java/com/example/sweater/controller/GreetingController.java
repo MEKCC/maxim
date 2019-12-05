@@ -34,7 +34,7 @@ public class GreetingController {
     @PostMapping("/findFilms")
     @Transactional
     public String findFilm(@RequestParam String name, Model model) {
-        model.addAttribute("films", filmRepo.findByName(name));
+        model.addAttribute("films", filmRepo.findByNameContaining(name));
         return "search";
     }
 

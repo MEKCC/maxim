@@ -2,6 +2,7 @@
 
 <@c.page>
 
+    <h1 class="text-center">Edit user</h1>
     <div class="table-responsive">
         <table class="table table-bordered table-hover">
             <thead>

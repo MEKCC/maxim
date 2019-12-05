@@ -2,7 +2,7 @@
 <@c.page>
 
 
-    <h1 class="text-center">Film list</h1>
+    <h1 class="text-center">Edit film</h1>
     <br>
     <a class="btn btn-success" href="/filmsEdit/addFilm">Create Film</a>
     <br>

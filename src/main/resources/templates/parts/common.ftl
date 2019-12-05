@@ -22,8 +22,9 @@
         <h1 class="display-10">We have all the information about movies and TV shows!</h1>
         <p class="lead">
     </div>
+    <div class="container">
     <#nested>
-
+    </div>
     <#--    JQuery, Popper, JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

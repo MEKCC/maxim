@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface FilmRepo extends JpaRepository<Film, Long> {
 
-    List<Film> findByName(String name);
+    List<Film> findByNameContaining(String name);
 }

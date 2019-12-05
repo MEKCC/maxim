@@ -2,23 +2,22 @@
 
 <@c.page>
 
-    <div class="text-center"><strong>Messages list</strong></div>
-    <div>
+    <h1 class="text-center">Messages</h1>
+    <div class="form-group">
         <form method="post">
-            <textarea class="form-control-md" rows="3" name="text" placeholder="comment..." required></textarea>
+            <textarea class="form-control" rows="3" name="text" placeholder="left feedback..." required></textarea>
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <br>
-            <input type="submit" value="OK">
+            <button type="button" class="btn btn-secondary">OK</button>
         </form>
     </div>
 
     <#list messages as message>
-        <div class="card my-3" style="width: 28rem;">
-            <div class="m-2">
-                <span>${message.text}</span>
-            </div>
+        <div class="card my-3">
             <div class="card-footer text-muted">
                 <strong>${message.author.getUsername()}</strong>
+            </div>
+            <div class="m-2">
+                <span>${message.text}</span>
             </div>
         </div>
     </#list>
